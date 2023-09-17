@@ -1,0 +1,69 @@
+/* Make a Calculator. Take 2 numbers (a & b) from the user and an operation as follows : 
+	1 : + (Addition) a + b
+2 : - (Subtraction) a - b
+3 : * (Multiplication) a * b
+4 : / (Division) a / b
+5 : % (Modulo or remainder) a % b
+Calculate the result according to the operation given and display it to the user.
+*/
+
+import java.util.*;
+class calculator{
+    public static void main(String args[]){
+       
+      //inputs
+       Scanner sc = new Scanner(System.in);
+       System.out.print("Enter a:");
+       double a = sc.nextDouble();
+       System.out.print("Enter b:");
+       double b = sc.nextDouble();
+       System.out.print("Select an operation:");
+       int operations = sc.nextInt();
+       System.out.println("1: + (Addition)");
+       System.out.println("2: - (Substraction)");
+       System.out.println("3: * (Multiplication)");
+       System.out.println("4: % (Modulo)");
+       System.out.println("5: / (Division)");
+       double result;
+
+     //switch statement
+     
+      switch(operations){
+       case 1:  
+        result=a+b;
+        System.out.println("result="+result);
+        break;
+       case 2:
+            result=a-b;
+        System.out.println("result="+result);
+        break;
+        case 3:
+            result=a*b;
+        System.out.println("result="+result);
+        break;
+        case 4:
+            if(b==0){
+                System.out.println("Error: Modulo by 0 is not allowed");
+            }
+            else{
+            result=a%b;
+        System.out.println("result="+result);
+       
+            }
+             break;
+            case 5:
+                if(b==0){
+                    System.out.println("Error: Division by 0 is not allowed");
+                }
+                else{
+                    result=a/b;
+                    System.out.println("result=" +result);
+                    
+                }
+                break;
+        default:
+        System.out.println("invalid operation");
+        
+    }
+  }
+}
